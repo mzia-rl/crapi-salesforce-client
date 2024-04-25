@@ -1,0 +1,31 @@
+{
+  "name": "canzell/crapi-salesforce-client",
+  "description": "Canzell API Salesforce Client",
+  "type": "project",
+  "version": 1.0,
+  "authors": [
+    {
+      "name": "Isaiah Smith",
+      "email": "7606654-isaiah.smith@users.noreply.gitlab.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.2",
+    "canzell/crapi-client": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Canzell\\": "./src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Canzell\\Providers\\SalesforceServiceProvider"
+      ],
+      "aliases": {
+        "Salesforce": "Canzell\\Facades\\Salesforce"
+      }
+    }
+  }
+}
